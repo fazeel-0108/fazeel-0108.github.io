@@ -191,7 +191,7 @@ function drawParticles() {
 if (!matchMedia('(prefers-reduced-motion: reduce)').matches) drawParticles();
 
 /* ---------- Typing effect (hero roles) ---------- */
-const ROLES = ['Web Developer', 'CS Student 🎓', 'Problem Solver', 'Tech Explorer'];
+const ROLES = ['websites', 'Python tools', 'small automations', 'voice assistants'];
 const typingEl = $('#typing');
 let wi = 0, ci = 0, deleting = false;
 (function type() {
