@@ -232,15 +232,38 @@ if (finePointer && !reducedMotion) {
     btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
   });
 
-  /* ---------- 3D tilt cards (effect #1) ---------- */
+  /* ---------- 3D tilt cards (effect #1) + click tilt from any side ---------- */
   $$('.tilt-card').forEach(card => {
+    let pressed = false;
     card.addEventListener('mousemove', e => {
       const r = card.getBoundingClientRect();
       const x = (e.clientX - r.left) / r.width - .5;
       const y = (e.clientY - r.top) / r.height - .5;
-      card.style.transform = `perspective(700px) rotateY(${x * 10}deg) rotateX(${-y * 10}deg) translateY(-4px)`;
+      if (pressed) {
+        // while held: lean harder toward the pointer, slightly pressed in
+        card.style.transform = `perspective(700px) rotateY(${x * 13}deg) rotateX(${-y * 13}deg) scale(.98)`;
+      } else {
+        if (card.style.transition) card.style.transition = '';
+        card.style.transform = `perspective(700px) rotateY(${x * 10}deg) rotateX(${-y * 10}deg) translateY(-4px)`;
+      }
     });
-    card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+    card.addEventListener('mousedown', e => {
+      pressed = true;
+      card.style.transition = 'transform .18s ease';
+      const r = card.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width - .5;
+      const y = (e.clientY - r.top) / r.height - .5;
+      card.style.transform = `perspective(700px) rotateY(${x * 13}deg) rotateX(${-y * 13}deg) scale(.98)`;
+    });
+    const release = () => {
+      if (!pressed) return;
+      pressed = false;
+      card.style.transition = 'transform .5s cubic-bezier(.2,.8,.2,1)';
+      card.style.transform = '';
+      setTimeout(() => { if (!pressed) card.style.transition = ''; }, 520);
+    };
+    card.addEventListener('mouseup', release);
+    card.addEventListener('mouseleave', () => { pressed = false; card.style.transform = ''; });
   });
 
   /* ---------- Cursor glow cards (effect #3) ---------- */
