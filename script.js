@@ -255,6 +255,22 @@ if (finePointer && !reducedMotion) {
   window.__bindGlow = bindGlow;
 }
 
+/* ---------- Tap-tilt for touch devices: press = light lean back, release = ease back ---------- */
+if (!finePointer && !reducedMotion) {
+  $$('.tilt-card').forEach(card => {
+    card.addEventListener('touchstart', () => {
+      card.style.transition = 'transform .18s ease';
+      card.style.transform = 'perspective(700px) rotateX(8deg) scale(.985)';
+    }, { passive: true });
+    const release = () => {
+      card.style.transition = 'transform .5s cubic-bezier(.2,.8,.2,1)';
+      card.style.transform = '';
+    };
+    card.addEventListener('touchend', release, { passive: true });
+    card.addEventListener('touchcancel', release, { passive: true });
+  });
+}
+
 /* ---------- Scroll progress bar ---------- */
 const progress = $('#progressBar');
 addEventListener('scroll', () => {
