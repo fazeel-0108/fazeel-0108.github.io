@@ -3,248 +3,507 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Fazeel Abdur Rahman Khan — Web Developer & CS Student</title>
-  <meta name="description" content="Portfolio of Fazeel Abdur Rahman Khan — Computer Science student & web developer from Hyderabad. Creator of J.A.R.V.I.S (AI voice assistant) and the official QQGPT college website — live on the Telangana govt portal."/>
+  <title>Fazeel Abdur Rahman Khan — Web Developer &amp; CS Student</title>
+  <meta name="description" content="Portfolio of Fazeel Abdur Rahman Khan — CS diploma student & web developer from Hyderabad. Builder of J.A.R.V.I.S (AI voice assistant) and the official QQGPT college website, live on the Telangana govt portal. Built from scratch — no frameworks."/>
   <meta name="author" content="Fazeel Abdur Rahman Khan"/>
-  <meta name="theme-color" content="#05070f"/>
+  <meta name="theme-color" content="#0a0a0c"/>
+  <link rel="canonical" href="https://fazeel-0108.github.io/"/>
   <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://fazeel-0108.github.io/"/>
   <meta property="og:title" content="Fazeel Abdur Rahman Khan — Web Developer & CS Student"/>
-  <meta property="og:description" content="J.A.R.V.I.S AI voice assistant · official college website (live on Telangana govt portal) · ATM simulator · 35+ C/C++ programs."/>
-  <meta property="og:image" content="og-image.png"/>
+  <meta property="og:description" content="J.A.R.V.I.S AI voice assistant · official college website (live on Telangana govt portal) · ATM simulator · 35+ C/C++ programs. Built from scratch, zero frameworks."/>
+  <meta property="og:image" content="https://fazeel-0108.github.io/og-image.png"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="Fazeel Abdur Rahman Khan — Web Developer & CS Student"/>
   <meta name="twitter:description" content="J.A.R.V.I.S AI voice assistant · official college website (live) · ATM simulator · 35+ C/C++ programs."/>
-  <meta name="twitter:image" content="og-image.png"/>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2305070f'/%3E%3Ctext x='32' y='43' font-family='monospace' font-size='28' font-weight='bold' text-anchor='middle' fill='%2300e5ff'%3E%3C/%3E%3C/text%3E%3C/svg%3E"/>
+  <meta name="twitter:image" content="https://fazeel-0108.github.io/og-image.png"/>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='6' fill='%230a0a0c'/%3E%3Crect x='6.5' y='6.5' width='51' height='51' fill='none' stroke='%23232329'/%3E%3Ctext x='32' y='44' font-family='monospace' font-size='30' font-weight='bold' text-anchor='middle' fill='%23ffb454'%3E%3C/%3E%3C/text%3E%3C/svg%3E"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-  <!-- ================= PROGRESS BAR ================= -->
-  <div class="progress-bar" id="progressBar"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="progress" id="progress" aria-hidden="true"></div>
 
-  <!-- ================= NAVBAR ================= -->
-  <nav class="nav" id="nav">
+  <!-- ================= NAV ================= -->
+  <nav class="nav" id="nav" aria-label="Main">
     <a class="logo" href="#home">
-      <span class="logo-mark">&lt;/&gt;</span>
-      <span class="logo-text">fazeel<span class="accent">.exe</span></span>
+      <span class="logo-mark" aria-hidden="true">&lt;/&gt;</span>
+      <span class="logo-text">fazeel<span class="amber">.exe</span></span>
     </a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home" class="nav-link active">Home</a></li>
-      <li><a href="#about" class="nav-link">About</a></li>
-      <li><a href="#skills" class="nav-link">Skills</a></li>
-      <li><a href="#projects" class="nav-link">Projects</a></li>
-      <li><a href="#contact" class="nav-link">Contact</a></li>
-    </ul>
-    <a href="#contact" class="btn-shimmer nav-cta">Hire&nbsp;Me</a>
-    <button class="burger" id="burger" aria-label="Menu">
-      <span></span><span></span><span></span>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span>
     </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a class="nav-link" href="#about">About</a></li>
+      <li><a class="nav-link" href="#skills">Toolbox</a></li>
+      <li><a class="nav-link" href="#projects">Work</a></li>
+      <li><a class="nav-link" href="#contact">Contact</a></li>
+      <li class="nav-cta-item"><a class="nav-cta" href="#contact">Hire&nbsp;Me</a></li>
+    </ul>
   </nav>
 
   <!-- ================= HERO ================= -->
   <header class="hero" id="home">
-    <canvas id="particles"></canvas>
-    <div class="hero-inner">
-      <p class="hero-hi reveal-up">Hi, I'm</p>
-      <h1 class="hero-name reveal-up" id="scrambleName">Fazeel Abdur Rahman Khan.</h1>
-      <h2 class="hero-role reveal-up">
-        I like building <span class="accent"><span class="typing" id="typing"></span></span>
-      </h2>
-      <p class="hero-desc reveal-up">
-        CS student &amp; web developer from Hyderabad. I got into tech by taking
-        computers apart — and stayed for the code. The hobby slowly turned into
-        real projects you'll find below.
-      </p>
-      <div class="hero-btns reveal-up">
-        <a href="#projects" class="btn-magnet btn-shimmer" id="magBtn1">View My Work</a>
-        <a href="#contact" class="btn-outline-magnet" id="magBtn2">Get In Touch</a>
-      </div>
-      <div class="hero-socials reveal-up">
-        <a class="ulink icon-btn" href="https://github.com/fazeel-0108" target="_blank" rel="noopener" aria-label="GitHub">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.69 1.25 3.34.95.1-.75.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18.92-.26 1.91-.38 2.9-.39.98 0 1.98.13 2.9.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.05.77 2.12 0 1.53-.01 2.76-.01 3.14 0 .3.21.66.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
-        </a>
-        <a class="ulink icon-btn" href="https://instagram.com/fazeel_0108" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.18 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.73 2.7 21.31.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.15A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm6.41-11.85a1.44 1.44 0 1 0 1.43 1.44 1.44 1.44 0 0 0-1.43-1.44z"/></svg>
-        </a>
-        <a class="ulink icon-btn" href="#" id="discordLink" aria-label="Discord" title="Discord: 10xSpy — click to copy">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.32 4.37a19.8 19.8 0 0 0-4.89-1.52.07.07 0 0 0-.08.04c-.21.38-.44.87-.61 1.25a18.3 18.3 0 0 0-5.48 0 12.6 12.6 0 0 0-.62-1.25.08.08 0 0 0-.08-.04 19.7 19.7 0 0 0-4.88 1.52.07.07 0 0 0-.03.03A20.3 20.3 0 0 0 .1 18.06a.08.08 0 0 0 .03.05 19.9 19.9 0 0 0 6 3.03.08.08 0 0 0 .08-.03c.46-.63.87-1.3 1.22-2a.08.08 0 0 0-.04-.11 13 13 0 0 1-1.87-.9.08.08 0 0 1-.01-.13c.13-.09.25-.19.37-.29a.07.07 0 0 1 .08-.01 14.2 14.2 0 0 0 12.06 0 .07.07 0 0 1 .08.01c.12.1.25.2.37.29a.08.08 0 0 1-.01.13c-.6.35-1.22.65-1.87.9a.08.08 0 0 0-.04.11c.36.7.77 1.36 1.22 2a.08.08 0 0 0 .08.03 19.8 19.8 0 0 0 6.01-3.03.08.08 0 0 0 .03-.05c.5-5.18-.84-9.68-3.55-13.66a.06.06 0 0 0-.03-.03zM8.02 15.33c-1.18 0-2.16-1.08-2.16-2.42s.95-2.42 2.16-2.42c1.21 0 2.18 1.09 2.16 2.42 0 1.34-.96 2.42-2.16 2.42zm7.97 0c-1.18 0-2.16-1.08-2.16-2.42s.95-2.42 2.16-2.42c1.21 0 2.18 1.09 2.16 2.42 0 1.34-.95 2.42-2.16 2.42z"/></svg>
-        </a>
-        <a class="ulink icon-btn" href="https://www.snapchat.com/add/fazeel0108?share_id=TStOvLHwKlU&locale=en-GB" target="_blank" rel="noopener" aria-label="Snapchat" title="Snapchat: fazeel0108">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 1.5c2.9 0 5.24 2.3 5.24 5.14 0 .57.02 1.15-.02 1.72.02.02.05.03.08.03.6-.28 1.19-.42 1.74-.42.71 0 1.31.28 1.65.77.24.35.33.77.24 1.15-.15.72-.85 1.22-1.8 1.45-.14.03-.28.07-.42.11-.02.05.03.15.1.26.9 1.4 2.06 2.4 3.48 2.9.3.1.5.38.48.69-.03.3-.25.55-.55.62-.98.22-2.02.35-2.6.55-.09.4-.2.86-.53.9-.35.04-.86-.05-1.42-.05-.53 0-.87.07-1.2.24-.38.2-.71.52-1.13.94-.63.63-1.4 1.36-2.84 1.36h-.2c-1.44 0-2.21-.73-2.84-1.36-.42-.42-.75-.74-1.13-.94-.33-.17-.67-.24-1.2-.24-.56 0-1.07.09-1.42.05-.33-.04-.44-.5-.53-.9-.58-.2-1.62-.33-2.6-.55-.3-.07-.52-.32-.55-.62a.67.67 0 0 1 .48-.69c1.42-.5 2.58-1.5 3.48-2.9.07-.11.12-.21.1-.26-.14-.04-.28-.08-.42-.11-.95-.23-1.65-.73-1.8-1.45-.09-.38 0-.8.24-1.15.34-.49.94-.77 1.65-.77.55 0 1.14.14 1.74.42.03 0 .06-.01.08-.03-.04-.57-.02-1.15-.02-1.72C6.8 3.8 9.14 1.5 12.04 1.5z"/></svg>
-        </a>
-        <a class="ulink icon-btn" href="mailto:fazeelabdurahman0108@gmail.com" aria-label="Email">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6L22 7"/></svg>
-        </a>
-      </div>
-    </div>
-    <a class="scroll-down" href="#about" aria-label="Scroll down">
-      <span class="mouse"><span class="wheel"></span></span>
-      <span class="sd-label">scroll</span>
-    </a>
-  </header>
-
-  <!-- ================= ABOUT ================= -->
-  <section class="section" id="about">
-    <h2 class="sec-title reveal-up">About Me</h2>
-    <div class="about-grid">
-      <div class="about-text reveal-up">
-        <p>
-          I'm <b>Fazeel Abdur Rahman Khan</b>, a Computer Science diploma student at
-          <b>Quli Qutub Shah Government Polytechnic, Hyderabad</b>. It all started at
-          <b>Little Century High School</b>, where I was less interested in <i>using</i> a computer
-          and more curious about what's going on <i>inside</i> it.
+    <canvas id="trace" aria-hidden="true"></canvas>
+    <div class="container hero-grid">
+      <div class="hero-main">
+        <p class="kicker load" style="--d:.05s">Hyderabad, India · CS diploma student</p>
+        <h1 class="hero-name">
+          <span class="hline"><span class="hline-inner load" style="--d:.12s">Fazeel Abdur</span></span>
+          <span class="hline"><span class="hline-inner load" style="--d:.22s">Rahman <em>Khan.</em></span></span>
+        </h1>
+        <p class="hero-sub load" style="--d:.34s">
+          I like building <span class="type" id="typing"></span><span class="caret" aria-hidden="true"></span>
+          <span class="hero-sub2">It started with taking computers apart. Now it&rsquo;s real projects — all built from scratch, all still improving.</span>
         </p>
-        <p>
-          Along the way I taught myself web development with
-          <span class="chip">Python</span> <span class="chip">JavaScript</span> <span class="chip">HTML</span> <span class="chip">CSS</span>,
-          picked up <span class="chip">C</span>, <span class="chip">C++</span> and <span class="chip">Data Structures</span> from my coursework,
-          and keep it all organized with <span class="chip">Git</span> and <span class="chip">VS Code</span>.
-          Most of what I know came from building small things, breaking them, then fixing them.
-        </p>
-        <p>
-          Off the keyboard, I'm usually reading about hardware, networking and cybersecurity —
-          I genuinely enjoy understanding how machines talk to each other. The biggest thing I've built
-          so far is a voice assistant I actually talk to every day. The next one? Still sketching it out.
-        </p>
-      </div>
-      <aside class="about-side reveal-up">
-        <div class="side-card tilt-card glow-card">
-          <div class="avatar">F</div>
-          <h3>Fazeel Abdur Rahman Khan</h3>
-          <p class="side-role">CS Diploma Student · Web Developer</p>
-          <ul class="side-list">
-            <li><span>🎓</span> Quli Qutub Shah Govt. Polytechnic</li>
-            <li><span>🏫</span> Little Century High School</li>
-            <li><span>📍</span> Hyderabad, India</li>
-            <li><span>🛡️</span> Cybersecurity enthusiast</li>
-            <li><span>🖥️</span> Hardware &amp; networking geek</li>
-          </ul>
-          <a href="mailto:fazeelabdurahman0108@gmail.com" class="btn-shimmer side-mail">Say Hello →</a>
+        <div class="hero-cta load" style="--d:.44s">
+          <a class="btn btn-solid btn-magnet" href="#projects">See the work</a>
+          <a class="btn btn-line btn-magnet" href="#contact">Get in touch</a>
         </div>
+      </div>
+      <aside class="spec ticks load" style="--d:.55s" aria-label="Quick facts">
+        <div class="spec-row"><span class="spec-key">Base</span><span class="spec-val">Hyderabad, IN</span></div>
+        <div class="spec-row"><span class="spec-key">Focus</span><span class="spec-val">web · AI · systems</span></div>
+        <div class="spec-row"><span class="spec-key">Stack</span><span class="spec-val">Python · JS · C/C++</span></div>
+        <div class="spec-row"><span class="spec-key">Status</span><span class="spec-val"><span class="dot" aria-hidden="true"></span>open to internships</span></div>
       </aside>
     </div>
-  </section>
-
-  <!-- ================= SKILLS ================= -->
-  <section class="section" id="skills">
-    <h2 class="sec-title reveal-up">Skills &amp; Tools</h2>
-    <div class="skills-grid">
-      <div class="skill-card glow-card tilt-card reveal-up">
-        <div class="skill-icon">🐍</div>
-        <h3>Python</h3>
-        <p>Scripting &amp; backend logic</p>
-        <div class="skill-bar"><span style="--lvl:85%"></span></div>
+    <div class="container hero-foot load" style="--d:.66s">
+      <div class="hero-socials">
+        <a class="icon-btn" href="https://github.com/fazeel-0108" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.69 1.25 3.34.95.1-.75.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18.92-.26 1.91-.38 2.9-.39.98 0 1.98.13 2.9.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.05.77 2.12 0 1.53-.01 2.76-.01 3.14 0 .3.21.66.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+        </a>
+        <a class="icon-btn" href="https://instagram.com/fazeel_0108" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.18 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.73 2.7 21.31.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.15A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm6.41-11.85a1.44 1.44 0 1 0 1.43 1.44 1.44 1.44 0 0 0-1.43-1.44z"/></svg>
+        </a>
+        <a class="icon-btn" href="#" id="discordLink" aria-label="Discord: 10xSpy — click to copy" title="Discord: 10xSpy — click to copy">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.32 4.37a19.8 19.8 0 0 0-4.89-1.52.07.07 0 0 0-.08.04c-.21.38-.44.87-.61 1.25a18.3 18.3 0 0 0-5.48 0 12.6 12.6 0 0 0-.62-1.25.08.08 0 0 0-.08-.04 19.7 19.7 0 0 0-4.88 1.52.07.07 0 0 0-.03.03A20.3 20.3 0 0 0 .1 18.06a.08.08 0 0 0 .03.05 19.9 19.9 0 0 0 6 3.03.08.08 0 0 0 .08-.03c.46-.63.87-1.3 1.22-2a.08.08 0 0 0-.04-.11 13 13 0 0 1-1.87-.9.08.08 0 0 1-.01-.13c.13-.09.25-.19.37-.29a.07.07 0 0 1 .08-.01 14.2 14.2 0 0 0 12.06 0 .07.07 0 0 1 .08.01c.12.1.25.2.37.29a.08.08 0 0 1-.01.13c-.6.35-1.22.65-1.87.9a.08.08 0 0 0-.04.11c.36.7.77 1.36 1.22 2a.08.08 0 0 0 .08.03 19.8 19.8 0 0 0 6.01-3.03.08.08 0 0 0 .03-.05c.5-5.18-.84-9.68-3.55-13.66a.06.06 0 0 0-.03-.03zM8.02 15.33c-1.18 0-2.16-1.08-2.16-2.42s.95-2.42 2.16-2.42c1.21 0 2.18 1.09 2.16 2.42 0 1.34-.96 2.42-2.16 2.42zm7.97 0c-1.18 0-2.16-1.08-2.16-2.42s.95-2.42 2.16-2.42c1.21 0 2.18 1.09 2.16 2.42 0 1.34-.95 2.42-2.16 2.42z"/></svg>
+        </a>
+        <a class="icon-btn" href="https://www.snapchat.com/add/fazeel0108?share_id=TStOvLHwKlU&locale=en-GB" target="_blank" rel="noopener" aria-label="Snapchat">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 1.5c2.9 0 5.24 2.3 5.24 5.14 0 .57.02 1.15-.02 1.72.02.02.05.03.08.03.6-.28 1.19-.42 1.74-.42.71 0 1.31.28 1.65.77.24.35.33.77.24 1.15-.15.72-.85 1.22-1.8 1.45-.14.03-.28.07-.42.11-.02.05.03.15.1.26.9 1.4 2.06 2.4 3.48 2.9.3.1.5.38.48.69-.03.3-.25.55-.55.62-.98.22-2.02.35-2.6.55-.09.4-.2.86-.53.9-.35.04-.86-.05-1.42-.05-.53 0-.87.07-1.2.24-.38.2-.71.52-1.13.94-.63.63-1.4 1.36-2.84 1.36h-.2c-1.44 0-2.21-.73-2.84-1.36-.42-.42-.75-.74-1.13-.94-.33-.17-.67-.24-1.2-.24-.56 0-1.07.09-1.42.05-.33-.04-.44-.5-.53-.9-.58-.2-1.62-.33-2.6-.55-.3-.07-.52-.32-.55-.62a.67.67 0 0 1 .48-.69c1.42-.5 2.58-1.5 3.48-2.9.07-.11.12-.21.1-.26-.14-.04-.28-.08-.42-.11-.95-.23-1.65-.73-1.8-1.45-.09-.38 0-.8.24-1.15.34-.49.94-.77 1.65-.77.55 0 1.14.14 1.74.42.03 0 .06-.01.08-.03-.04-.57-.02-1.15-.02-1.72C6.8 3.8 9.14 1.5 12.04 1.5z"/></svg>
+        </a>
+        <a class="icon-btn" href="mailto:fazeelabdurahman0108@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6L22 7"/></svg>
+        </a>
       </div>
-      <div class="skill-card glow-card tilt-card reveal-up">
-        <div class="skill-icon">🟨</div>
-        <h3>JavaScript</h3>
-        <p>Interactive front-ends</p>
-        <div class="skill-bar"><span style="--lvl:80%"></span></div>
-      </div>
-      <div class="skill-card glow-card tilt-card reveal-up">
-        <div class="skill-icon">🎨</div>
-        <h3>HTML &amp; CSS</h3>
-        <p>Modern responsive layouts</p>
-        <div class="skill-bar"><span style="--lvl:90%"></span></div>
-      </div>
-      <div class="skill-card glow-card tilt-card reveal-up">
-        <div class="skill-icon">🌿</div>
-        <h3>Git</h3>
-        <p>Version control &amp; GitHub</p>
-        <div class="skill-bar"><span style="--lvl:75%"></span></div>
-      </div>
-      <div class="skill-card glow-card tilt-card reveal-up">
-        <div class="skill-icon">💻</div>
-        <h3>VS Code</h3>
-        <p>Daily driver editor</p>
-        <div class="skill-bar"><span style="--lvl:90%"></span></div>
-      </div>
-      <div class="skill-card glow-card tilt-card reveal-up">
-        <div class="skill-icon">🛡️</div>
-        <h3>Cybersecurity</h3>
-        <p>Fundamentals &amp; curiosity</p>
-        <div class="skill-bar"><span style="--lvl:60%"></span></div>
-      </div>
-      <div class="skill-card glow-card tilt-card reveal-up">
-        <div class="skill-icon">🌐</div>
-        <h3>Networking</h3>
-        <p>Concepts &amp; protocols</p>
-        <div class="skill-bar"><span style="--lvl:65%"></span></div>
-      </div>
-      <div class="skill-card glow-card tilt-card reveal-up">
-        <div class="skill-icon">📊</div>
-        <h3>Word &amp; Excel</h3>
-        <p>Docs, sheets &amp; reports</p>
-        <div class="skill-bar"><span style="--lvl:80%"></span></div>
-      </div>
-      <div class="skill-card glow-card tilt-card reveal-up">
-        <div class="skill-icon">⚙️</div>
-        <h3>C &amp; C++</h3>
-        <p>Systems &amp; OOP fundamentals</p>
-        <div class="skill-bar"><span style="--lvl:80%"></span></div>
-      </div>
-      <div class="skill-card glow-card tilt-card reveal-up">
-        <div class="skill-icon">🧩</div>
-        <h3>Data Structures</h3>
-        <p>Sorting, searching &amp; logic</p>
-        <div class="skill-bar"><span style="--lvl:70%"></span></div>
-      </div>
+      <a class="scroll-cue" href="#about"><span>scroll</span><span class="cue-line" aria-hidden="true"></span></a>
     </div>
-  </section>
+  </header>
 
-  <!-- ================= PROJECTS ================= -->
-  <section class="section" id="projects">
-    <h2 class="sec-title reveal-up">Projects</h2>
-    <p class="sec-sub reveal-up">Everything below is built by me, from scratch — hover a card to see it lift, click it for the full story.</p>
-    <div class="projects-grid" id="projectsGrid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px"><!-- cards injected by JS --></div>
-  </section>
+  <main id="main">
 
-  <!-- Project detail modal -->
-  <div class="modal" id="projModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="modal-card">
-      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
-      <div class="modal-emoji" id="modalEmoji">🚀</div>
-      <h3 id="modalTitle"></h3>
-      <p class="modal-role" id="modalRole"></p>
-      <p class="modal-about" id="modalAbout"></p>
-      <ul class="modal-feats" id="modalFeats"></ul>
-      <div class="modal-tags" id="modalTags"></div>
-      <div class="modal-actions" id="modalActions"></div>
-    </div>
-  </div>
-
-  <!-- ================= CONTACT ================= -->
-  <section class="section" id="contact">
-    <h2 class="sec-title reveal-up">Contact</h2>
-    <div class="contact-wrap">
-      <div class="contact-card glow-card reveal-up">
-        <h3>Got an idea? Let's talk.</h3>
-        <p>
-          Want to build something together, need a hand with a project, or just
-          feel like talking tech? Don't be a stranger — I reply fast.
-        </p>
-        <a class="btn-magnet btn-shimmer" id="magBtn3" href="mailto:fazeelabdurahman0108@gmail.com">Say Hello</a>
-        <div class="contact-socials">
-          <a class="ulink" href="https://github.com/fazeel-0108" target="_blank" rel="noopener">GitHub</a>
-          <a class="ulink" href="https://instagram.com/fazeel_0108" target="_blank" rel="noopener">Instagram</a>
-          <a class="ulink" href="#" id="discordCopy2">Discord</a>
-          <a class="ulink" href="https://www.snapchat.com/add/fazeel0108?share_id=TStOvLHwKlU&locale=en-GB" target="_blank" rel="noopener">Snapchat</a>
+    <!-- ================= ABOUT ================= -->
+    <section class="section" id="about">
+      <div class="container">
+        <header class="sec-head reveal">
+          <p class="kicker">about</p>
+          <h2 class="sec-title">Curious by <em>default.</em></h2>
+        </header>
+        <div class="about-grid">
+          <div class="about-prose reveal">
+            <p>
+              I&rsquo;m <strong>Fazeel Abdur Rahman Khan</strong>, a Computer Science diploma student at
+              <strong>Quli Qutub Shah Government Polytechnic, Hyderabad</strong>. It all started at
+              <strong>Little Century High School</strong>, where I was less interested in <em>using</em> a computer
+              and more curious about what&rsquo;s going on <em>inside</em> it.
+            </p>
+            <p>
+              Along the way I taught myself web development with Python, JavaScript, HTML and CSS,
+              picked up C, C++ and Data Structures from my coursework, and keep it all organized with
+              Git and VS Code. Most of what I know came from building small things, breaking them,
+              then fixing them.
+            </p>
+            <p>
+              Off the keyboard, I&rsquo;m usually reading about hardware, networking and cybersecurity —
+              I genuinely enjoy understanding how machines talk to each other. The biggest thing I&rsquo;ve built
+              so far is a voice assistant I actually talk to every day. The next one? Still sketching it out.
+            </p>
+          </div>
+          <aside class="label-card ticks reveal" style="--d:.12s" aria-label="Facts">
+            <div class="label-row"><span class="label-key">Name</span><span class="label-val">Fazeel Abdur Rahman Khan</span></div>
+            <div class="label-row"><span class="label-key">College</span><span class="label-val">QQ Govt. Polytechnic, Hyd.</span></div>
+            <div class="label-row"><span class="label-key">School</span><span class="label-val">Little Century High School</span></div>
+            <div class="label-row"><span class="label-key">Based in</span><span class="label-val">Hyderabad, India</span></div>
+            <div class="label-row"><span class="label-key">Into</span><span class="label-val">hardware · networks · security</span></div>
+            <div class="label-row"><span class="label-key">Building</span><span class="label-val">sites, tools &amp; voice AI</span></div>
+          </aside>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section class="section" id="skills">
+      <div class="container">
+        <header class="sec-head reveal">
+          <p class="kicker">toolbox</p>
+          <h2 class="sec-title">What I work <em>with.</em></h2>
+          <p class="sec-sub">An honest index — no percentage bars. Each skill is backed by something I&rsquo;ve actually built.</p>
+        </header>
+        <div class="skill-index">
+          <div class="skill-group reveal">
+            <h3 class="skill-group-key">Languages</h3>
+            <ul class="skill-list">
+              <li><span class="skill-name">Python</span><span class="skill-note">Jarvis · ATM · games &amp; tools</span></li>
+              <li><span class="skill-name">JavaScript</span><span class="skill-note">the interactions on this site</span></li>
+              <li><span class="skill-name">C</span><span class="skill-note">35+ programs — memory &amp; pointers</span></li>
+              <li><span class="skill-name">C++</span><span class="skill-note">OOP — polymorphism &amp; objects</span></li>
+            </ul>
+          </div>
+          <div class="skill-group reveal" style="--d:.08s">
+            <h3 class="skill-group-key">Web</h3>
+            <ul class="skill-list">
+              <li><span class="skill-name">HTML</span><span class="skill-note">semantic, accessible pages</span></li>
+              <li><span class="skill-name">CSS</span><span class="skill-note">layouts, motion &amp; this design</span></li>
+              <li><span class="skill-name">Responsive design</span><span class="skill-note">from 320px phones to 4K</span></li>
+            </ul>
+          </div>
+          <div class="skill-group reveal" style="--d:.16s">
+            <h3 class="skill-group-key">Tools &amp; workflow</h3>
+            <ul class="skill-list">
+              <li><span class="skill-name">Git + GitHub</span><span class="skill-note">this site deploys from a repo</span></li>
+              <li><span class="skill-name">VS Code</span><span class="skill-note">daily driver</span></li>
+              <li><span class="skill-name">Word &amp; Excel</span><span class="skill-note">docs, sheets &amp; reports</span></li>
+            </ul>
+          </div>
+          <div class="skill-group reveal" style="--d:.24s">
+            <h3 class="skill-group-key">Currently exploring</h3>
+            <ul class="skill-list">
+              <li><span class="skill-name">Data Structures</span><span class="skill-note">sorting, searching, logic</span></li>
+              <li><span class="skill-name">Networking</span><span class="skill-note">how machines talk to each other</span></li>
+              <li><span class="skill-name">Cybersecurity</span><span class="skill-note">fundamentals — how things break</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section class="section" id="projects">
+      <div class="container">
+        <header class="sec-head reveal">
+          <p class="kicker">selected work</p>
+          <h2 class="sec-title">Built from <em>scratch.</em></h2>
+          <p class="sec-sub">Everything here is my own work — hover a project for detail, click it for the full story.</p>
+        </header>
+
+        <!-- FEATURED 1 — College Website (live) -->
+        <article class="project feature reveal" data-project>
+          <div class="feature-visual ticks">
+            <svg viewBox="0 0 560 300" class="diagram" role="img" aria-label="Diagram of the college website layout">
+              <rect x="1" y="1" width="558" height="298" fill="none" stroke="#232329"/>
+              <rect x="1" y="1" width="558" height="30" fill="#0f0f12" stroke="#232329"/>
+              <circle cx="18" cy="16" r="4" fill="#3a3a42"/><circle cx="32" cy="16" r="4" fill="#3a3a42"/><circle cx="46" cy="16" r="4" fill="#3a3a42"/>
+              <rect x="70" y="12" width="240" height="8" fill="#1c1c22"/>
+              <circle cx="532" cy="16" r="4" fill="#ffb454"/>
+              <text x="280" y="120" text-anchor="middle" class="dg-mono" fill="#ecece8" font-size="22">qqgpthyd.dte.telangana.gov.in</text>
+              <rect x="120" y="140" width="320" height="2" fill="#ffb454"/>
+              <text x="280" y="166" text-anchor="middle" class="dg-mono" fill="#6b6b74" font-size="11">OFFICIAL SITE — QULI QUTUB SHAH GOVT. POLYTECHNIC</text>
+              <g stroke="#232329" fill="#0f0f12">
+                <rect x="30"  y="200" width="96" height="70"/><rect x="136" y="200" width="96" height="70"/>
+                <rect x="242" y="200" width="96" height="70"/><rect x="348" y="200" width="96" height="70"/>
+                <rect x="454" y="200" width="76" height="70"/>
+              </g>
+              <g class="dg-mono" fill="#6b6b74" font-size="10" text-anchor="middle">
+                <text x="78"  y="239">About</text><text x="184" y="239">Courses</text>
+                <text x="290" y="239">Facilities</text><text x="396" y="239">Faculty</text><text x="492" y="239">Students</text>
+              </g>
+            </svg>
+            <p class="diagram-note">Diagram — not a screenshot. The real site is one click away.</p>
+          </div>
+          <div class="feature-body">
+            <div class="feature-top">
+              <h3 class="feature-title">Official College Website</h3>
+              <span class="flag flag-live"><span class="dot" aria-hidden="true"></span>Live in production</span>
+            </div>
+            <p class="feature-desc">Designed and built the official website of <em>my own college</em> — deployed on the Telangana government education portal. When someone searches QQGPT online, this is what they see.</p>
+            <ul class="feature-list">
+              <li>7 responsive pages — home, about, courses, facilities, faculty, achievements &amp; student corner</li>
+              <li>Hand-written CSS, optimized images, fast even on slow connections</li>
+              <li>Used by real students daily on the official DTE portal</li>
+            </ul>
+            <div class="proj-tags"><span>HTML</span><span>CSS</span><span>Responsive</span><span>Production</span></div>
+            <div class="proj-actions">
+              <a class="btn btn-solid btn-sm btn-magnet" href="https://qqgpthyd.dte.telangana.gov.in/showView?div_id=43" target="_blank" rel="noopener">View live site</a>
+              <button class="btn btn-line btn-sm" data-open-details>Full story</button>
+            </div>
+          </div>
+          <script type="application/json" class="proj-data">
+            {
+              "name": "Official College Website",
+              "role": "Design · Development · Deployment",
+              "about": "The official website of Quli Qutub Shah Government Polytechnic College, Hyderabad — designed and built by me from scratch and deployed on the Telangana government education portal. It gives students and visitors a clean, responsive window into the college.",
+              "feats": [
+                "7 fully responsive pages — home, about, courses, facilities, faculty, achievements & student corner",
+                "Separate hand-written stylesheet per page for easy maintenance",
+                "Live on the official Telangana DTE portal, used by real students",
+                "Optimized images and fast loading even on slow connections"
+              ],
+              "tags": ["HTML", "CSS", "Responsive", "Production"],
+              "repo": "",
+              "link": "https://qqgpthyd.dte.telangana.gov.in/showView?div_id=43"
+            }
+          </script>
+        </article>
+
+        <!-- FEATURED 2 — J.A.R.V.I.S -->
+        <article class="project feature flip reveal" data-project>
+          <div class="feature-visual ticks">
+            <svg viewBox="0 0 560 300" class="diagram" role="img" aria-label="Diagram of the J.A.R.V.I.S voice pipeline">
+              <rect x="1" y="1" width="558" height="298" fill="none" stroke="#232329"/>
+              <rect x="30" y="40" width="92" height="52" fill="#0f0f12" stroke="#232329"/>
+              <text x="76" y="70" text-anchor="middle" class="dg-mono" fill="#ecece8" font-size="13">MIC</text>
+              <path d="M122 66 C 160 66, 170 40, 210 40 S 280 92, 320 66" fill="none" stroke="#ffb454" stroke-width="2"/>
+              <rect x="196" y="118" width="168" height="64" fill="#0f0f12" stroke="#ffb454"/>
+              <text x="280" y="145" text-anchor="middle" class="dg-mono" fill="#ecece8" font-size="13">AGENT</text>
+              <text x="280" y="165" text-anchor="middle" class="dg-mono" fill="#6b6b74" font-size="10">LiveKit + Gemini realtime</text>
+              <path d="M364 150 H 420" stroke="#232329" stroke-width="2"/>
+              <rect x="420" y="92" width="110" height="46" fill="#0f0f12" stroke="#232329"/>
+              <text x="475" y="119" text-anchor="middle" class="dg-mono" fill="#ecece8" font-size="12">mem0 memory</text>
+              <rect x="420" y="162" width="110" height="46" fill="#0f0f12" stroke="#232329"/>
+              <text x="475" y="189" text-anchor="middle" class="dg-mono" fill="#ecece8" font-size="12">tools · time · files</text>
+              <rect x="196" y="222" width="168" height="46" fill="#0f0f12" stroke="#232329"/>
+              <text x="280" y="249" text-anchor="middle" class="dg-mono" fill="#ecece8" font-size="12">SPEAKER — answers out loud</text>
+              <path d="M280 182 V 222" stroke="#232329" stroke-width="2"/>
+              <g fill="#ffb454" opacity=".8">
+                <rect x="60"  y="286" width="4" height="8"/><rect x="72"  y="282" width="4" height="12"/>
+                <rect x="84"  y="284" width="4" height="10"/><rect x="96"  y="278" width="4" height="16"/>
+                <rect x="108" y="285" width="4" height="9"/><rect x="120" y="280" width="4" height="14"/>
+                <rect x="132" y="286" width="4" height="8"/><rect x="144" y="283" width="4" height="11"/>
+                <rect x="156" y="279" width="4" height="15"/><rect x="168" y="285" width="4" height="9"/>
+                <rect x="180" y="282" width="4" height="12"/><rect x="192" y="286" width="4" height="8"/>
+              </g>
+            </svg>
+            <p class="diagram-note">Diagram — the pipeline behind the assistant I talk to every day.</p>
+          </div>
+          <div class="feature-body">
+            <div class="feature-top">
+              <h3 class="feature-title">J.A.R.V.I.S <em class="feature-em">— AI Voice Assistant</em></h3>
+              <span class="flag"><span class="dot" aria-hidden="true"></span>Flagship build</span>
+            </div>
+            <p class="feature-desc">A real-time voice AI for the PC — you speak, it thinks, remembers and answers out loud. Built on the LiveKit Agents SDK with Google Gemini realtime models, then extended by me with custom tools, a fallback LLM engine and an animated desktop dashboard.</p>
+            <ul class="feature-list">
+              <li>Realtime speech-to-speech via LiveKit + Gemini / OpenAI</li>
+              <li>Long-term memory — every conversation recalled through mem0</li>
+              <li>Function-calling tools: date &amp; time, opening files and apps on the PC</li>
+              <li>CustomTkinter dashboard with a 25-bar audio visualizer</li>
+            </ul>
+            <div class="proj-tags"><span>Python</span><span>LiveKit</span><span>Gemini</span><span>mem0</span><span>CustomTkinter</span></div>
+            <div class="proj-actions">
+              <a class="btn btn-line btn-sm btn-magnet" href="https://github.com/fazeel-0108/fazeel-projects/tree/main/python/jarvis-ai-assistant" target="_blank" rel="noopener">View code</a>
+              <button class="btn btn-line btn-sm" data-open-details>Full story</button>
+            </div>
+          </div>
+          <script type="application/json" class="proj-data">
+            {
+              "name": "J.A.R.V.I.S — AI Voice Assistant",
+              "role": "Architecture · Agent tools · Dashboard",
+              "about": "A real-time voice AI assistant for the PC — you speak, it thinks, remembers and answers out loud. Built on the LiveKit Agents SDK with Google Gemini realtime models and extended by me with custom tools, a fallback LLM engine and an animated desktop dashboard.",
+              "feats": [
+                "Realtime speech-to-speech via LiveKit + Gemini / OpenAI",
+                "Long-term memory — every conversation recalled through mem0",
+                "Function-calling tools: date & time, opening files and apps on the PC",
+                "OpenRouter (Hermes-3) fallback engine when realtime models are unavailable",
+                "CustomTkinter dashboard with a 25-bar audio visualizer reacting to the agent's state"
+              ],
+              "tags": ["Python", "LiveKit", "Gemini", "mem0", "CustomTkinter"],
+              "repo": "https://github.com/fazeel-0108/fazeel-projects/tree/main/python/jarvis-ai-assistant",
+              "link": ""
+            }
+          </script>
+        </article>
+
+        <!-- OTHER BUILDS -->
+        <div class="builds">
+          <header class="builds-head reveal">
+            <h3 class="builds-title">Other builds</h3>
+            <span class="builds-line" aria-hidden="true"></span>
+          </header>
+
+          <article class="project build reveal" data-project>
+            <svg class="build-glyph" viewBox="0 0 40 40" aria-hidden="true"><rect x="3" y="10" width="26" height="17" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 34h24" stroke="currentColor" stroke-width="2"/><path d="M30 18h7m-3-3 3 3-3 3" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+            <div class="build-main">
+              <h4 class="build-name">ATM Simulation</h4>
+              <p class="build-desc">A desktop ATM that works like the real thing — insert card, enter PIN, run the full banking menu.</p>
+            </div>
+            <div class="build-meta">
+              <div class="proj-tags"><span>Python</span><span>Tkinter</span></div>
+              <div class="build-links">
+                <a href="https://github.com/fazeel-0108/fazeel-projects/tree/main/python/atm-simulation" target="_blank" rel="noopener" class="ulink">Code</a>
+                <button class="ulink btn-plain" data-open-details>Details</button>
+              </div>
+            </div>
+            <script type="application/json" class="proj-data">
+            {
+              "name": "ATM Simulation",
+              "role": "GUI design · Application logic",
+              "about": "A desktop ATM simulator that behaves like the real thing — from inserting your card to completing a withdrawal. Built entirely with Python's Tkinter, focusing on realistic page flow and a clean GUI.",
+              "feats": [
+                "Complete flow: insert card → PIN → menu → balance / deposit / withdraw",
+                "Card artwork and bank-brand visuals (Visa, Amex, ATM)",
+                "Page-by-page navigation like a physical ATM",
+                "Clean separation of screens into individual modules"
+              ],
+              "tags": ["Python", "Tkinter", "GUI"],
+              "repo": "https://github.com/fazeel-0108/fazeel-projects/tree/main/python/atm-simulation",
+              "link": ""
+            }
+            </script>
+          </article>
+
+          <article class="project build reveal" data-project>
+            <svg class="build-glyph" viewBox="0 0 40 40" aria-hidden="true"><rect x="5" y="5" width="30" height="30" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="14" cy="14" r="2.4" fill="currentColor"/><circle cx="20" cy="20" r="2.4" fill="currentColor"/><circle cx="26" cy="26" r="2.4" fill="currentColor"/></svg>
+            <div class="build-main">
+              <h4 class="build-name">Python Mini-Games &amp; Tools</h4>
+              <p class="build-desc">Dice, guessing games, a typing test, a small voice assistant and WhatsApp automation — each one taught me something new.</p>
+            </div>
+            <div class="build-meta">
+              <div class="proj-tags"><span>Python</span><span>Automation</span></div>
+              <div class="build-links">
+                <a href="https://github.com/fazeel-0108/fazeel-projects/tree/main/python/mini-games-tools" target="_blank" rel="noopener" class="ulink">Code</a>
+                <button class="ulink btn-plain" data-open-details>Details</button>
+              </div>
+            </div>
+            <script type="application/json" class="proj-data">
+            {
+              "name": "Python Mini-Games & Tools",
+              "role": "Python scripting",
+              "about": "A growing toolbox of small Python programs — each one standalone, each one teaching me something new: game loops, automation, speech and user interaction.",
+              "feats": [
+                "Games: dice game, guess-the-number, rock-paper-scissors",
+                "Typing test that measures WPM and accuracy",
+                "Voice assistant that answers basic spoken commands",
+                "WhatsApp message automation with pywhatkit"
+              ],
+              "tags": ["Python", "Games", "Automation"],
+              "repo": "https://github.com/fazeel-0108/fazeel-projects/tree/main/python/mini-games-tools",
+              "link": ""
+            }
+            </script>
+          </article>
+
+          <article class="project build reveal" data-project>
+            <svg class="build-glyph" viewBox="0 0 40 40" aria-hidden="true"><rect x="4" y="4" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"/><rect x="23" y="4" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"/><rect x="4" y="23" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"/><rect x="24" y="24" width="4" height="4" fill="currentColor"/><rect x="31" y="24" width="4" height="4" fill="currentColor"/><rect x="24" y="31" width="4" height="4" fill="currentColor"/><rect x="31" y="31" width="4" height="4" fill="currentColor"/></svg>
+            <div class="build-main">
+              <h4 class="build-name">QR Code Generator</h4>
+              <p class="build-desc">Turn any text or URL into a scannable QR with custom size, border and colors.</p>
+            </div>
+            <div class="build-meta">
+              <div class="proj-tags"><span>Python</span><span>qrcode</span></div>
+              <div class="build-links">
+                <a href="https://github.com/fazeel-0108/fazeel-projects/tree/main/python/qr-code-generator" target="_blank" rel="noopener" class="ulink">Code</a>
+                <button class="ulink btn-plain" data-open-details>Details</button>
+              </div>
+            </div>
+            <script type="application/json" class="proj-data">
+            {
+              "name": "QR Code Generator",
+              "role": "Python scripting",
+              "about": "A customizable QR code generator — turn any text or URL into a scannable QR with your preferred size, border and colors, powered by Python's qrcode library.",
+              "feats": [
+                "Custom box size and border for every QR",
+                "Full control over fill and background colors",
+                "One-command generation from any text or URL"
+              ],
+              "tags": ["Python", "qrcode", "Pillow"],
+              "repo": "https://github.com/fazeel-0108/fazeel-projects/tree/main/python/qr-code-generator",
+              "link": ""
+            }
+            </script>
+          </article>
+
+          <header class="builds-head reveal">
+            <h3 class="builds-title">Learning ground</h3>
+            <span class="builds-line" aria-hidden="true"></span>
+          </header>
+
+          <article class="project build reveal" data-project>
+            <svg class="build-glyph" viewBox="0 0 40 40" aria-hidden="true"><path d="M14 8c-4 0-4 4-4 6s0 4-4 6c4 2 4 4 4 6s0 6 4 6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M26 8c4 0 4 4 4 6s0 4 4 6c-4 2-4 4-4 6s0 6-4 6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M17 24l6-8" stroke="currentColor" stroke-width="2"/></svg>
+            <div class="build-main">
+              <h4 class="build-name">C &amp; C++ Programs</h4>
+              <p class="build-desc">The foundation layer — 35+ programs from sorting algorithms and matrix math to structs, unions and polymorphism. Not glamorous, but this is where everything else came from.</p>
+            </div>
+            <div class="build-meta">
+              <div class="proj-tags"><span>C</span><span>C++</span><span>Algorithms</span></div>
+              <div class="build-links">
+                <a href="https://github.com/fazeel-0108/fazeel-projects" target="_blank" rel="noopener" class="ulink">Code</a>
+                <button class="ulink btn-plain" data-open-details>Details</button>
+              </div>
+            </div>
+            <script type="application/json" class="proj-data">
+            {
+              "name": "C & C++ Programs",
+              "role": "Fundamentals",
+              "about": "My foundations: 35+ programs written while grinding through C and C++ — the layer where you really learn how memory, pointers and logic work.",
+              "feats": [
+                "C: bubble & insertion sort, matrix addition, Fibonacci, factorial",
+                "Structs, nested structures, unions and passing them to functions",
+                "All four function styles — with/without arguments & return values",
+                "C++: runtime polymorphism, multiple objects, manipulators"
+              ],
+              "tags": ["C", "C++", "OOP", "Algorithms"],
+              "repo": "https://github.com/fazeel-0108/fazeel-projects",
+              "link": ""
+            }
+            </script>
+          </article>
+
+          <div class="more-gh reveal">
+            <a class="ulink" href="https://github.com/fazeel-0108" target="_blank" rel="noopener">Everything else lives on GitHub →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section" id="contact">
+      <div class="container">
+        <header class="sec-head reveal">
+          <p class="kicker">contact</p>
+        </header>
+        <div class="contact-wrap ticks reveal" style="--d:.1s">
+          <h2 class="contact-title">Got an idea?<br/><em>Let&rsquo;s talk.</em></h2>
+          <p class="contact-sub">
+            Want to build something together, need a hand with a project, or just
+            feel like talking tech? Don&rsquo;t be a stranger — I reply fast.
+          </p>
+          <a class="btn btn-solid btn-lg btn-magnet" href="mailto:fazeelabdurahman0108@gmail.com">fazeelabdurahman0108@gmail.com</a>
+          <div class="contact-socials">
+            <a class="ulink" href="https://github.com/fazeel-0108" target="_blank" rel="noopener">GitHub</a>
+            <a class="ulink" href="https://instagram.com/fazeel_0108" target="_blank" rel="noopener">Instagram</a>
+            <a class="ulink" href="#" id="discordCopy2" title="Click to copy 10xSpy">Discord</a>
+            <a class="ulink" href="https://www.snapchat.com/add/fazeel0108?share_id=TStOvLHwKlU&locale=en-GB" target="_blank" rel="noopener">Snapchat</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- ================= FOOTER ================= -->
   <footer class="footer">
-    <p>Designed &amp; built by <span class="accent">Fazeel Abdur Rahman Khan</span></p>
-    <p class="footer-hint">© 2026 · Made with 💙, lots hard work and with hover effects &amp; zero frameworks.</p>
+    <div class="container footer-inner">
+      <p>Designed &amp; built by <span class="amber">Fazeel Abdur Rahman Khan</span></p>
+      <p class="footer-hint">© 2026 · Made with 💙, lots hard work and with hover effects &amp; zero frameworks.</p>
+    </div>
   </footer>
 
-  <div class="toast" id="toast">Copied to clipboard ✓</div>
+  <!-- ================= MODAL ================= -->
+  <div class="modal" id="projModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-card ticks" role="document">
+      <button class="modal-close" id="modalClose" aria-label="Close details">✕</button>
+      <p class="kicker" id="modalRole"></p>
+      <h3 class="modal-title" id="modalTitle"></h3>
+      <p class="modal-about" id="modalAbout"></p>
+      <ul class="modal-feats" id="modalFeats"></ul>
+      <div class="proj-tags" id="modalTags"></div>
+      <div class="proj-actions" id="modalActions"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script src="script.js"></script>
 </body>
