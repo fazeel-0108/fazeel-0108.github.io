@@ -186,7 +186,7 @@ body{
   color:var(--acc);margin-bottom:10px;
 }
 .sec-title{font-size:clamp(26px,4vw,38px);font-weight:800;margin-bottom:12px}
-.sec-sub{color:var(--muted);font-size:14px;margin-bottom:36px}
+.sec-sub{color:var(--muted);font-size:15px;margin-bottom:36px}
 
 /* ---------- About ---------- */
 .about-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:44px;align-items:start}
@@ -256,6 +256,7 @@ body{
 }
 
 /* ---------- Effect #9: lift + reveal on projects ---------- */
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px}
 .project-card{
   position:relative;border-radius:18px;background:var(--card);
   border:1px solid var(--line);overflow:hidden;min-height:250px;
@@ -266,6 +267,13 @@ body{
 .proj-body{padding:26px;display:flex;flex-direction:column;flex:1}
 .proj-content{display:flex;flex-direction:column;flex:1}
 .proj-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;gap:12px}
+.proj-top-left{display:flex;align-items:center;gap:12px;min-width:0}
+/* editorial project number — scannable case-study index */
+.proj-num{
+  font-family:"JetBrains Mono",monospace;font-size:12.5px;font-weight:600;color:var(--acc);
+  letter-spacing:.08em;opacity:.85;
+}
+.project-card:hover .proj-num{opacity:1}
 .proj-folder{font-size:34px}
 .proj-links{display:flex;gap:12px}
 .proj-links a{color:var(--muted);transition:color .3s, transform .3s;display:inline-flex}
@@ -311,6 +319,8 @@ body{
 .featured .proj-title{font-size:clamp(21px,2.4vw,26px)}
 .featured .proj-desc{font-size:14.5px}
 .featured .proj-top{margin-bottom:14px}
+/* featured card reads as a case study at a glance — key details always visible */
+.featured .proj-more{max-height:none;opacity:1;margin-top:12px}
 
 /* ---------- Project detail modal ---------- */
 .modal{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:20px;
