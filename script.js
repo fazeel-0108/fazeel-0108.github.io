@@ -221,7 +221,9 @@ let wi = 0, ci = 0, deleting = false;
 })();
 
 /* ---------- Magnetic buttons (effect #2) — desktop pointers only ---------- */
-if (finePointer && !reducedMotion) {
+/* NOTE: hover/tilt/glow intentionally bind regardless of prefers-reduced-motion
+   (owner request — effects must work even with Windows "Show animations" off). */
+if (finePointer) {
   $$('.btn-magnet, .btn-outline-magnet, .nav-cta').forEach(btn => {
     btn.addEventListener('mousemove', e => {
       const r = btn.getBoundingClientRect();
@@ -279,7 +281,7 @@ if (finePointer && !reducedMotion) {
 }
 
 /* ---------- Tap-tilt for touch devices: press = light lean back, release = ease back ---------- */
-if (!finePointer && !reducedMotion) {
+if (!finePointer) {
   $$('.tilt-card').forEach(card => {
     card.addEventListener('touchstart', () => {
       card.style.transition = 'transform .18s ease';
